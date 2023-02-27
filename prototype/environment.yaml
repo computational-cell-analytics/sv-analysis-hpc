@@ -1,0 +1,11 @@
+channels:
+    - conda-forge
+name:
+    sv-seg
+dependencies:
+    - bioimageio.core
+    - h5py
+    - mrcfile
+    - pandas
+    - pytorch
+    - scikit-image
