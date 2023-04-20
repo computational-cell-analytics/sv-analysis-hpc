@@ -8,4 +8,12 @@ The dependencies needed for running the scripts can be installed either via cond
 - environment.yaml (for conda, create a new environment with these environments via `conda env create -f environment.yaml`)
 - requirements.txt (for pip)
 
-Note: in the case of conda this will create an environment with a cpu version of pytorch.
+Note: in the case of conda this will create an environment with a cpu version of PyTorch.
+
+
+## Training
+
+The script `train_supervised.py` is for training a 3D U-Net on tomograms (stored as mrc files) and vesicle labels (stored as h5 files).
+The file `environment_training.yaml` can be used to set up a conda environment with all dependencies needed for running this script.
+This environment will install a version of PyTorch compiled with CUDA, so that training can be run on the GPU.
+Note that you may need to change the CUDA version to match the nvidia driver version installed on your system (line 12 in the environment file).
