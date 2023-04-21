@@ -87,9 +87,9 @@ def run_training(args):
 
 def main():
     parser = argparse.ArgumentParser(description="Train a 3D U-Net for vesicle segmentation.")
-    parser.add_argument("-i", "--input_folder", required=True, help="Path to the folder with tomograms")
-    parser.add_argument("-l", "--label_folder", required=True, help="Path to the folder with label data")
-    parser.add_argument("-o", "--output", help="Folder where the model checkpoint and logs will be saved.")
+    parser.add_argument("-i", "--input_folder", required=True, help="Path to the folder with tomograms (in mrc format).")
+    parser.add_argument("-l", "--label_folder", required=True, help="Path to the folder with label data (in hdf5 format).")
+    parser.add_argument("-o", "--output", help="Folder where the model checkpoint and logs will be saved. After training the model ")
     parser.add_argument("-b", "--batch_size", default=1, type=int)
     parser.add_argument("-n", "--n_iterations", default=50000, type=int)
     args = parser.parse_args()
